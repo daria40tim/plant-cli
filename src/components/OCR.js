@@ -20,7 +20,7 @@ const  OC = ({match}) => {
     const [info, setInfo] = useState("")
     const [conn_type, setConn] = useState("")
     const [coil, setCoil] = useState(2)
-    const [mes, setMes] = useState("кВа")
+    const [mes, setMes] = useState(true)
 
     const dispatch = useDispatch()
 
@@ -101,7 +101,10 @@ const  OC = ({match}) => {
             <tr>
                   <td align='justify'>
                     <h5>Единицы измерения мощности</h5>
-                    <input className='cr_input' value={mes} name='mes' onChange={(e)=>setMes(e.target.value)} /*placeholder={org.mes}*/></input>
+                    <select className="form-select" name="type" id="selector" onChange={(e)=>setMes(e.target.value)} value={mes}>
+                      <option value={"0"} selected>кВа</option>
+                      <option value={"1"}>кВт</option>
+                </select>
               </td>
             </tr>
             <tr>

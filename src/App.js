@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import './App.css';
 import React, {Component} from 'react';
 import DirSelect from './components/DirSelect';
+import Cards from './components/Cards';
 
 class App extends Component {
 
@@ -18,7 +19,7 @@ class App extends Component {
           </Route>
           <Route exact path="/search">
             <Header/>
-           
+           <Cards/>
           </Route>
           <Route exact path="/ocr">
             <Header/>
