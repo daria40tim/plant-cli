@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import Header from './components/Header'
+import OCR from './components/OCR'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route } from "react-router-dom";
 import './App.css';
+import React, {Component} from 'react';
+import DirSelect from './components/DirSelect';
 
-function App() {
+class App extends Component {
+
+  render(){
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route exact path="/">
+            <Header/>
+           
+          </Route>
+          <Route exact path="/search">
+            <Header/>
+           
+          </Route>
+          <Route exact path="/ocr">
+            <Header/>
+           <DirSelect/>
+          </Route>
+          <Route exact path="/ocr/:id">
+            <Header/>
+           <OCR/>
+          </Route>
+        </div>
+      </BrowserRouter>
   );
+  }
 }
 
 export default App;

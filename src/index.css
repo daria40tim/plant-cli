@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navigator {
+  font-size: 30;
+}
+
+.cr_input{
+  width: 100%;
+  min-height: fit-content;
+}
+
+.card_img{
+  width: 50vw;
+}
+
+.dir_selector{
+  margin-left: 25vw;
+  margin-right: 25vw;
+  margin-top: 25vh;
+}
